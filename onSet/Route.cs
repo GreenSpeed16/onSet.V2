@@ -1,82 +1,84 @@
-﻿using Excel = Microsoft.Office.Interop.Excel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace onSet
 {
-    class Route
+    public class Route : IExcelWriteable
     {
         //Fields
-        protected string color, wall, setter;
+        public string color { get; private set; }
+        public string wall { get; private set; }
+        public string setter { get; private set; }
 
-        public string grade { get; set; }
+        public int SetterID { get; private set; }
+
+        public string grade { get; private set; }
         public int Row { get; set; }
-        public string Column { get; set; }
 
-        //Constructor
+        public string PrimaryKey { get; private set; }
+
+        //SQL
+        static SqlConnection cnn = DBManagement.cnn;
+        static SqlDataAdapter adapter = DBManagement.adapter;
+        SqlCommand command;
+        static SqlDataReader dataReader = DBManagement.dataReader;
+        string sql;
+
+
+        //Constructors
         public Route(string grade, string wall, string setter, string color)
         {
             this.grade = grade;
             this.color = color;
             this.wall = wall;
             this.setter = setter;
+            sql = string.Format("SELECT SetterId" +
+                "FROM Setters" +
+                "WHERE SetterName = '{0}'", setter);
+            command = new SqlCommand(sql, cnn);
+            dataReader = command.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                this.SetterID = (int) dataReader.GetValue(0);
+            }
+        }
+
+        public Route(string grade, string wall, string setter, string color, string PrimaryKey)
+        {
+            this.grade = grade;
+            this.color = color;
+            this.wall = wall;
+            this.setter = setter;
+            this.PrimaryKey = PrimaryKey;
         }
 
         //Methods
-        public void submitRoute(Excel.Worksheet routeSheet, Excel.Workbook routeBook, Excel.Application reader)
+        public virtual void Submit()
         {
+            sql = string.Format("Insert into Routes (Wall, RouteGrade, SetterId, Color) values('{0}', '{1}', {2}, '{3}', '{4}')", wall, grade, SetterID.ToString(), color);
+            command = new SqlCommand(sql, cnn);
+            adapter.InsertCommand = command;
+            adapter.InsertCommand.ExecuteNonQuery();
 
-            int lastUsedRow = routeSheet.Cells.Find("*", System.Reflection.Missing.Value,
-                               System.Reflection.Missing.Value, System.Reflection.Missing.Value,
-                               Excel.XlSearchOrder.xlByRows, Excel.XlSearchDirection.xlPrevious,
-                               false, System.Reflection.Missing.Value, System.Reflection.Missing.Value).Row;
-
-            //Update last row
-            routeSheet.Cells[(lastUsedRow + 1), "A"].Value = "'" + grade;
-            routeSheet.Cells[(lastUsedRow + 1), "B"].Value = "'" + wall;
-            routeSheet.Cells[(lastUsedRow + 1), "C"].Value = "'" + setter;
-            routeSheet.Cells[(lastUsedRow + 1), "D"].Value = "'" + color;
-
-            routeBook.Save();
+            command.Dispose();
         }
 
-        public void deleteRoute(Excel.Worksheet routeSheet, Excel.Workbook routeBook, bool isPreset, Excel.Application reader)
+        public string ToString()
         {
-            /*            //Instantiate variables
-                        Range rowToDelete;
-                        Range currentSpreadSheet;*/
-
-            int lastUsedRow = routeSheet.Cells.Find("*", System.Reflection.Missing.Value,
-                               System.Reflection.Missing.Value, System.Reflection.Missing.Value,
-                               Excel.XlSearchOrder.xlByRows, Excel.XlSearchDirection.xlPrevious,
-                               false, System.Reflection.Missing.Value, System.Reflection.Missing.Value).Row;
-
-            //Delete route from spreadsheet
-            if (isPreset)
-            {
-                routeSheet.Range[string.Format("{0}{1}:{2}{3}", Column, 2, Column, lastUsedRow)].Clear();
-                /*currentSpreadSheet = routeSheet[string.Format("{0}{1}:{2}{3}", Column, 2, Column, routeSheet.RowCount)];*/
-            }
-            else
-            {
-                routeSheet.Range[string.Format("A{0}:D{1}", Row, Row)].Delete();
-                /*currentSpreadSheet = routeSheet[string.Format("A{0}:D{1}", Row, Row)];*/
-            }
-
-            
-            /*rowToDelete.ClearContents();
-            currentSpreadSheet.Trim();*/
-
-            routeBook.Save();
+            return string.Format("{0}, {1} {2}, {3}", setter, color, grade, wall);
         }
 
-        public override string ToString()
+        public void SetRow(object sender, int Row)
         {
-            if (color == "Preset") return grade;
-            else return string.Format("{0}, {1} {2}, {3}", setter, color, grade, wall);
+            if(sender is DBManagement)
+            {
+                this.Row = Row;
+            }
         }
     }
 }

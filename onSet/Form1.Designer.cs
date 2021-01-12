@@ -118,16 +118,16 @@
             this.ropeGoalBox12 = new System.Windows.Forms.TextBox();
             this.ropeGoalBox11 = new System.Windows.Forms.TextBox();
             this.ropeGoalBox10 = new System.Windows.Forms.TextBox();
-            this.ropeGoalBox9 = new System.Windows.Forms.TextBox();
+            this.ropeGoalBox09 = new System.Windows.Forms.TextBox();
             this.ropeCurveSubmit = new System.Windows.Forms.Button();
-            this.ropeGoalBox8 = new System.Windows.Forms.TextBox();
-            this.ropeGoalBox7 = new System.Windows.Forms.TextBox();
-            this.ropeGoalBox6 = new System.Windows.Forms.TextBox();
-            this.ropeGoalBox5 = new System.Windows.Forms.TextBox();
-            this.ropeGoalBox4 = new System.Windows.Forms.TextBox();
-            this.ropeGoalBox3 = new System.Windows.Forms.TextBox();
-            this.ropeGoalBox2 = new System.Windows.Forms.TextBox();
-            this.ropeGoalBox1 = new System.Windows.Forms.TextBox();
+            this.ropeGoalBox08 = new System.Windows.Forms.TextBox();
+            this.ropeGoalBox07 = new System.Windows.Forms.TextBox();
+            this.ropeGoalBox06 = new System.Windows.Forms.TextBox();
+            this.ropeGoalBox05 = new System.Windows.Forms.TextBox();
+            this.ropeGoalBox04 = new System.Windows.Forms.TextBox();
+            this.ropeGoalBox03 = new System.Windows.Forms.TextBox();
+            this.ropeGoalBox02 = new System.Windows.Forms.TextBox();
+            this.ropeGoalBox01 = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -958,16 +958,16 @@
             this.ropePage.Controls.Add(this.ropeGoalBox12);
             this.ropePage.Controls.Add(this.ropeGoalBox11);
             this.ropePage.Controls.Add(this.ropeGoalBox10);
-            this.ropePage.Controls.Add(this.ropeGoalBox9);
+            this.ropePage.Controls.Add(this.ropeGoalBox09);
             this.ropePage.Controls.Add(this.ropeCurveSubmit);
-            this.ropePage.Controls.Add(this.ropeGoalBox8);
-            this.ropePage.Controls.Add(this.ropeGoalBox7);
-            this.ropePage.Controls.Add(this.ropeGoalBox6);
-            this.ropePage.Controls.Add(this.ropeGoalBox5);
-            this.ropePage.Controls.Add(this.ropeGoalBox4);
-            this.ropePage.Controls.Add(this.ropeGoalBox3);
-            this.ropePage.Controls.Add(this.ropeGoalBox2);
-            this.ropePage.Controls.Add(this.ropeGoalBox1);
+            this.ropePage.Controls.Add(this.ropeGoalBox08);
+            this.ropePage.Controls.Add(this.ropeGoalBox07);
+            this.ropePage.Controls.Add(this.ropeGoalBox06);
+            this.ropePage.Controls.Add(this.ropeGoalBox05);
+            this.ropePage.Controls.Add(this.ropeGoalBox04);
+            this.ropePage.Controls.Add(this.ropeGoalBox03);
+            this.ropePage.Controls.Add(this.ropeGoalBox02);
+            this.ropePage.Controls.Add(this.ropeGoalBox01);
             this.ropePage.Controls.Add(this.label22);
             this.ropePage.Controls.Add(this.label21);
             this.ropePage.Controls.Add(this.label20);
@@ -1025,94 +1025,94 @@
             this.ropeGoalBox12.Location = new System.Drawing.Point(146, 136);
             this.ropeGoalBox12.Name = "ropeGoalBox12";
             this.ropeGoalBox12.Size = new System.Drawing.Size(57, 20);
-            this.ropeGoalBox12.TabIndex = 19;
+            this.ropeGoalBox12.TabIndex = 11;
             // 
             // ropeGoalBox11
             // 
             this.ropeGoalBox11.Location = new System.Drawing.Point(35, 136);
             this.ropeGoalBox11.Name = "ropeGoalBox11";
             this.ropeGoalBox11.Size = new System.Drawing.Size(57, 20);
-            this.ropeGoalBox11.TabIndex = 18;
+            this.ropeGoalBox11.TabIndex = 10;
             // 
             // ropeGoalBox10
             // 
             this.ropeGoalBox10.Location = new System.Drawing.Point(146, 110);
             this.ropeGoalBox10.Name = "ropeGoalBox10";
             this.ropeGoalBox10.Size = new System.Drawing.Size(57, 20);
-            this.ropeGoalBox10.TabIndex = 17;
+            this.ropeGoalBox10.TabIndex = 9;
             // 
-            // ropeGoalBox9
+            // ropeGoalBox09
             // 
-            this.ropeGoalBox9.Location = new System.Drawing.Point(35, 110);
-            this.ropeGoalBox9.Name = "ropeGoalBox9";
-            this.ropeGoalBox9.Size = new System.Drawing.Size(57, 20);
-            this.ropeGoalBox9.TabIndex = 16;
+            this.ropeGoalBox09.Location = new System.Drawing.Point(35, 110);
+            this.ropeGoalBox09.Name = "ropeGoalBox09";
+            this.ropeGoalBox09.Size = new System.Drawing.Size(57, 20);
+            this.ropeGoalBox09.TabIndex = 8;
             // 
             // ropeCurveSubmit
             // 
             this.ropeCurveSubmit.Location = new System.Drawing.Point(65, 186);
             this.ropeCurveSubmit.Name = "ropeCurveSubmit";
             this.ropeCurveSubmit.Size = new System.Drawing.Size(75, 23);
-            this.ropeCurveSubmit.TabIndex = 20;
+            this.ropeCurveSubmit.TabIndex = 12;
             this.ropeCurveSubmit.Text = "Submit";
             this.ropeCurveSubmit.UseVisualStyleBackColor = true;
             this.ropeCurveSubmit.Click += new System.EventHandler(this.ropeCurveSubmit_Click);
             // 
-            // ropeGoalBox8
+            // ropeGoalBox08
             // 
-            this.ropeGoalBox8.Location = new System.Drawing.Point(146, 84);
-            this.ropeGoalBox8.Name = "ropeGoalBox8";
-            this.ropeGoalBox8.Size = new System.Drawing.Size(57, 20);
-            this.ropeGoalBox8.TabIndex = 15;
+            this.ropeGoalBox08.Location = new System.Drawing.Point(146, 84);
+            this.ropeGoalBox08.Name = "ropeGoalBox08";
+            this.ropeGoalBox08.Size = new System.Drawing.Size(57, 20);
+            this.ropeGoalBox08.TabIndex = 7;
             // 
-            // ropeGoalBox7
+            // ropeGoalBox07
             // 
-            this.ropeGoalBox7.Location = new System.Drawing.Point(35, 84);
-            this.ropeGoalBox7.Name = "ropeGoalBox7";
-            this.ropeGoalBox7.Size = new System.Drawing.Size(57, 20);
-            this.ropeGoalBox7.TabIndex = 14;
+            this.ropeGoalBox07.Location = new System.Drawing.Point(35, 84);
+            this.ropeGoalBox07.Name = "ropeGoalBox07";
+            this.ropeGoalBox07.Size = new System.Drawing.Size(57, 20);
+            this.ropeGoalBox07.TabIndex = 6;
             // 
-            // ropeGoalBox6
+            // ropeGoalBox06
             // 
-            this.ropeGoalBox6.Location = new System.Drawing.Point(146, 58);
-            this.ropeGoalBox6.Name = "ropeGoalBox6";
-            this.ropeGoalBox6.Size = new System.Drawing.Size(57, 20);
-            this.ropeGoalBox6.TabIndex = 13;
+            this.ropeGoalBox06.Location = new System.Drawing.Point(146, 58);
+            this.ropeGoalBox06.Name = "ropeGoalBox06";
+            this.ropeGoalBox06.Size = new System.Drawing.Size(57, 20);
+            this.ropeGoalBox06.TabIndex = 5;
             // 
-            // ropeGoalBox5
+            // ropeGoalBox05
             // 
-            this.ropeGoalBox5.Location = new System.Drawing.Point(35, 58);
-            this.ropeGoalBox5.Name = "ropeGoalBox5";
-            this.ropeGoalBox5.Size = new System.Drawing.Size(57, 20);
-            this.ropeGoalBox5.TabIndex = 12;
+            this.ropeGoalBox05.Location = new System.Drawing.Point(35, 58);
+            this.ropeGoalBox05.Name = "ropeGoalBox05";
+            this.ropeGoalBox05.Size = new System.Drawing.Size(57, 20);
+            this.ropeGoalBox05.TabIndex = 4;
             // 
-            // ropeGoalBox4
+            // ropeGoalBox04
             // 
-            this.ropeGoalBox4.Location = new System.Drawing.Point(146, 32);
-            this.ropeGoalBox4.Name = "ropeGoalBox4";
-            this.ropeGoalBox4.Size = new System.Drawing.Size(57, 20);
-            this.ropeGoalBox4.TabIndex = 11;
+            this.ropeGoalBox04.Location = new System.Drawing.Point(146, 32);
+            this.ropeGoalBox04.Name = "ropeGoalBox04";
+            this.ropeGoalBox04.Size = new System.Drawing.Size(57, 20);
+            this.ropeGoalBox04.TabIndex = 3;
             // 
-            // ropeGoalBox3
+            // ropeGoalBox03
             // 
-            this.ropeGoalBox3.Location = new System.Drawing.Point(35, 32);
-            this.ropeGoalBox3.Name = "ropeGoalBox3";
-            this.ropeGoalBox3.Size = new System.Drawing.Size(57, 20);
-            this.ropeGoalBox3.TabIndex = 10;
+            this.ropeGoalBox03.Location = new System.Drawing.Point(35, 32);
+            this.ropeGoalBox03.Name = "ropeGoalBox03";
+            this.ropeGoalBox03.Size = new System.Drawing.Size(57, 20);
+            this.ropeGoalBox03.TabIndex = 2;
             // 
-            // ropeGoalBox2
+            // ropeGoalBox02
             // 
-            this.ropeGoalBox2.Location = new System.Drawing.Point(146, 6);
-            this.ropeGoalBox2.Name = "ropeGoalBox2";
-            this.ropeGoalBox2.Size = new System.Drawing.Size(57, 20);
-            this.ropeGoalBox2.TabIndex = 9;
+            this.ropeGoalBox02.Location = new System.Drawing.Point(146, 6);
+            this.ropeGoalBox02.Name = "ropeGoalBox02";
+            this.ropeGoalBox02.Size = new System.Drawing.Size(57, 20);
+            this.ropeGoalBox02.TabIndex = 1;
             // 
-            // ropeGoalBox1
+            // ropeGoalBox01
             // 
-            this.ropeGoalBox1.Location = new System.Drawing.Point(35, 6);
-            this.ropeGoalBox1.Name = "ropeGoalBox1";
-            this.ropeGoalBox1.Size = new System.Drawing.Size(57, 20);
-            this.ropeGoalBox1.TabIndex = 8;
+            this.ropeGoalBox01.Location = new System.Drawing.Point(35, 6);
+            this.ropeGoalBox01.Name = "ropeGoalBox01";
+            this.ropeGoalBox01.Size = new System.Drawing.Size(57, 20);
+            this.ropeGoalBox01.TabIndex = 0;
             // 
             // label22
             // 
@@ -1333,7 +1333,6 @@
             this.Name = "Form1";
             this.Text = "onSet";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.boulderTab.ResumeLayout(false);
             this.boulderTab.PerformLayout();
@@ -1405,14 +1404,14 @@
         private System.Windows.Forms.TabPage ropePage;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button ropeCurveSubmit;
-        private System.Windows.Forms.TextBox ropeGoalBox8;
-        private System.Windows.Forms.TextBox ropeGoalBox7;
-        private System.Windows.Forms.TextBox ropeGoalBox6;
-        private System.Windows.Forms.TextBox ropeGoalBox5;
-        private System.Windows.Forms.TextBox ropeGoalBox4;
-        private System.Windows.Forms.TextBox ropeGoalBox3;
-        private System.Windows.Forms.TextBox ropeGoalBox2;
-        private System.Windows.Forms.TextBox ropeGoalBox1;
+        private System.Windows.Forms.TextBox ropeGoalBox08;
+        private System.Windows.Forms.TextBox ropeGoalBox07;
+        private System.Windows.Forms.TextBox ropeGoalBox06;
+        private System.Windows.Forms.TextBox ropeGoalBox05;
+        private System.Windows.Forms.TextBox ropeGoalBox04;
+        private System.Windows.Forms.TextBox ropeGoalBox03;
+        private System.Windows.Forms.TextBox ropeGoalBox02;
+        private System.Windows.Forms.TextBox ropeGoalBox01;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
@@ -1471,7 +1470,7 @@
         private System.Windows.Forms.Button parameterSubmitButton;
         private System.Windows.Forms.ComboBox boulderGradeBox;
         private System.Windows.Forms.TextBox ropeGoalBox10;
-        private System.Windows.Forms.TextBox ropeGoalBox9;
+        private System.Windows.Forms.TextBox ropeGoalBox09;
         private System.Windows.Forms.TextBox ropeGoalBox12;
         private System.Windows.Forms.TextBox ropeGoalBox11;
         private System.Windows.Forms.Label label40;
